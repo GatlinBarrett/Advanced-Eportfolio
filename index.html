@@ -21,7 +21,7 @@
     </script>
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img id="personal-logo" src="./assets/logo.svg" alt="" />
@@ -30,13 +30,14 @@
           <li class="nav__link">
             <a
               href="#"
+              onclick="toggleModal()"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -48,7 +49,7 @@
               >Contact</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -60,12 +61,13 @@
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey</h1>
-          <h1 class="title title--secondary">I'm Gatlin</h1>
+          <h1 class="title"><span class="blue">I'm Gatlin</span></h1>
           <p class="header__para">
             Im a <b class="blue">Frontend Software Engineer</b> with a strong
             passion for building web applications with great user experiences.
             <br />
-            Here's a bit more <b class="blue click" onclick="toggleModal()">about me</b>
+            Here's a bit more
+            <b class="blue click" onclick="toggleModal()">about me</b>
           </p>
           <div class="social__list">
             <a
@@ -92,9 +94,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fas fa-envelope"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -109,8 +113,16 @@
           <p class="modal__para">
             I'm a 21 year-old
             <b class="blue">frontend software engineer</b> with a strong passion
-            for developing websitres with
-            <b class="blue">great user experiences.</b>
+            for developing websites with
+            <b class="blue">great user experiences.</b><br />
+            I went to Northwest College in Powell Wyoming and got my
+            <b class="blue">Associate Degree in Computer Science</b><br />
+            I found this amazing online course through the internet called
+            <a href="https://frontendsimplified.com/" target="_blank"
+              ><u><b class="blue">Frontend Simplified</b></u></a>
+            and thought it was a great way to learn more information on
+            developing websites. I decided to take the course, and now I'm more than capable to
+            create great, responsive, awesome looking websites like this one.
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
@@ -123,7 +135,7 @@
             </figure>
             <figure class="modal__language">
               <img src="assets/java.png" class="modal__language--img" alt="" />
-              <span class="language__name">Java</span>
+              <span class="language__name">JavaScript</span>
             </figure>
             <figure class="modal__language">
               <img src="assets/react.png" class="modal__language--img" alt="" />
@@ -167,6 +179,15 @@
           </div>
         </div>
       </div>
+      <img src="assets/triangle.svg" class="shape shape--0" alt="" />
+      <img src="assets/circle.svg" class="shape shape--1" alt="" />
+      <img src="assets/squiggly.svg" class="shape shape--2" alt="" />
+      <img src="assets/circle.svg" class="shape shape--3" alt="" />
+      <img src="assets/semi circle.svg" class="shape shape--4" alt="" />
+      <img src="assets/circle.svg" class="shape shape--5" alt="" />
+      <img src="assets/squiggly.svg" class="shape shape--6" alt="" />
+      <img src="assets/circle.svg" class="shape shape--7" alt="" />
+      <img src="assets/triangle.svg" class="shape shape--8" alt="" />
     </section>
     <section id="projects">
       <div class="container">
@@ -301,6 +322,7 @@
             </a>
             <a
               href="#"
+              onclick="toggleModal()"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Contact
